@@ -7,7 +7,6 @@ public class Problema324 {
         Scanner sc = new Scanner(System.in);
         int q = sc.nextInt(),c=0;
         sc.nextLine();
-
             String w = sc.nextLine();
             String e[] = w.split(" ");
             int n[] = new int[e.length];
@@ -25,7 +24,6 @@ public class Problema324 {
                 for (int i = 0; i < e.length; i++) {
                     int g = n[i];
                     n[g - 1] = g;
-                    c++;
                 }
             q--;
         }
