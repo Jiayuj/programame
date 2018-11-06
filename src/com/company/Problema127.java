@@ -7,49 +7,37 @@ public class Problema127 {
         int v = in.nextInt();
         in.nextLine();
         while (v != 0) {
-            boolean q = true;
-            ArrayList<String> fe = new ArrayList<String>();
+            ArrayList<String> fe=new ArrayList<String>();
             String nombre = in.nextLine();
             String n[] = nombre.split(" ");
-            for (int i = 0; i < n.length; i++) {
-                if (n[i].equals("F")) {
+            for (int i = 0; i <n.length ; i++) {
+                if (n[i].equals("F")){
                     break;
-                } else if (n[i].length() > 24) {
-                    q = false;
-                } else {
-                    fe.add(n[i]);
-                    if (fe.size() > 49) {
-                        q = false;
-                    }
-                }
+                }else fe.add(n[i]);
             }
-            int s = Integer.parseInt(n[n.length - 2]);
-            int c = Integer.parseInt(n[n.length - 1]);
-            while (q == true) {
-                if (fe.size() < s) {
-                    System.out.println("TODOS TIENEN CAMA");
-                } else if (s == 0) {
-                    System.out.println("NADIE TIENE CAMA");
-                } else {
-                    int d = c - 1;
-                    while (fe.size() != s) {
-                        if (d < fe.size()) {
-                            fe.remove(d);
-                            d = d + c - 1;
-                        } else if (d >= fe.size()) {
-                            d = d - fe.size();
-                        }
+            int s = Integer.parseInt(n[n.length-2]);
+            int c = Integer.parseInt(n[n.length-1]);
+
+            if (fe.size()<s){
+                System.out.println("TODOS TIENEN CAMA");
+            }else if (s==0){
+                System.out.println("NADIE TIENE CAMA");
+            }else {
+                int d=c-1;
+                while (fe.size()!=s){
+                    if (d<fe.size()){
+                    fe.remove(d);
+                    d=d+c-1;
+                    }else if (d>fe.size()){
+                        d=d-fe.size();
                     }
-                    for (int i = 0; i < fe.size(); i++) {
-                        if (i == 0) {
-                            System.out.print(fe.get(i));
-                        } else System.out.print(" " + fe.get(i));
-                    }
-                    System.out.println();
                 }
-                break;
+                for (int i = 0; i <fe.size() ; i++) {
+                    System.out.print(fe.get(i)+" ");
+                }
             }
             v--;
         }
     }
 }
+
