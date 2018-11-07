@@ -27,7 +27,7 @@ public class Problema324 {
                 for (int i = 0; i < e.length; i++) {
                     int g = n1[i];
                     n2[n[i] - 1] = g;
-                    c++;
+                    c++
                 }
                 for (int i = 0; i < e.length; i++) {
                     int g = n2[i];
