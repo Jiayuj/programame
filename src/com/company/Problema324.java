@@ -23,9 +23,7 @@ public class Problema324 {
                 }
                 for (int i = 0; i < e.length; i++) {
                     int g = n[i];
-                    int g1 = n[i+g];
-                    n[n1[i]-1] = g;
-                    n[n1[g1]-1] = g1;
+                    n[g - 1] = g;
                 }
             q--;
         }
