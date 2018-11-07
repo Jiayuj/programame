@@ -33,7 +33,10 @@ public class Problema127 {
                     }
                 }
                 for (int i = 0; i <fe.size() ; i++) {
-                    System.out.print(fe.get(i)+" ");
+                    if (i==fe.size()-1){
+                        System.out.println(fe.get(i));
+                    }else
+                        System.out.print(fe.get(i)+" ");
                 }
             }
             v--;
