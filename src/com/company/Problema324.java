@@ -1,4 +1,6 @@
 package com.company;
+import java.lang.reflect.Array;
+import java.util.Objects;
 import java.util.Scanner;
 public class Problema324 {
     public static void main (String[] args){
@@ -19,24 +21,24 @@ public class Problema324 {
             n1[n[i] - 1] = g;
             c++;
         }
-
-        if (n1 == n) {
-            System.out.println(c/3);
-        }else{
-            while (n1 != n) {
+        if (n[0]==n1[0]&&n[0]==n2[0]) {
+            System.out.println(c / l);
+        }else {
+            while (n[0] != n1[0] && n[0] != n2[0]) {
                 for (int i = 0; i < e.length; i++) {
                     int g = n1[i];
                     n2[n[i] - 1] = g;
                     c++
                 }
+            }
+            while (n[0] != n1[0] && n[0] != n2[0]) {
                 for (int i = 0; i < e.length; i++) {
                     int g = n2[i];
                     n1[n[i] - 1] = g;
                     c++;
                 }
             }
-            System.out.println(c/3);
+            System.out.println(c / l);
         }
     }
 }
-
