@@ -30,6 +30,7 @@ public class Problema174 {
                 if(digitCount[i] != 0) {
                     if (digitCount[i]==2){
                        q=1;
+                       break;
                     }else q=0;
                 }
             }
@@ -55,7 +56,7 @@ public class Problema174 {
                         }
                         if (c==4){
                             añoP = año+1;
-                            System.out.println(añoP);
+                            System.out.print(añoP+" ");
                             q=2;
                         }
                     }
@@ -80,7 +81,7 @@ public class Problema174 {
                     if(digitCount[i] != 0) {
                         if (digitCount[i]==2){
                             añoP = año+1;
-                            System.out.println(añoP);
+                            System.out.print(añoP+" ");
                             q=3;
                         }
                     }
@@ -141,7 +142,6 @@ public class Problema174 {
                     }
                 }
             }
-
             vez--;
         }
     }

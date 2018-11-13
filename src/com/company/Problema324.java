@@ -28,7 +28,7 @@ public class Problema324 {
                 for (int i = 0; i < e.length; i++) {
                     int g = n1[i];
                     n2[n[i] - 1] = g;
-                    c++
+                    c++;
                 }
             }
             while (n[0] != n1[0] && n[0] != n2[0]) {
