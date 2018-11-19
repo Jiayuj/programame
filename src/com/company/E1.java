@@ -13,6 +13,6 @@ public class E1 {
                 q++;
             }
         }
-        System.out.println(q);
+        System.out.println(w);
     }
 }
