@@ -1,6 +1,4 @@
 package com.company;
-import java.lang.reflect.Array;
-import java.util.Objects;
 import java.util.Scanner;
 public class Problema324 {
     public static void main (String[] args){
