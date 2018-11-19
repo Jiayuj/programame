@@ -145,4 +145,32 @@ public class Problema174 {
             vez--;
         }
     }
+    public static int rep{
+        int año--;
+        int añoGuardado = año;
+        int [] digitCount = new int[10];
+        while (año != 0) {
+            //Get the lastDigit of inputNumber
+            int lastDigit = año % 10;
+            //incrementing the lastDigit's count
+            digitCount[lastDigit]++;
+            //Removing the lastDigit from inputNumber
+            año = año / 10;
+        }
+        año = añoGuardado;
+        int c=0;
+        for (int i = 0; i < digitCount.length; i++) {
+            if(digitCount[i] != 0) {
+                if (digitCount[i]==1){
+                    c++;
+                }
+                if (c==4){
+                    int añoP = año+1;
+                    System.out.print(añoP+" ");
+                    int q=2;
+                }
+            }
+        }
+
+    }
 }
