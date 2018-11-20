@@ -12,10 +12,14 @@ public class E3 {
             System.out.println("-");
         }else if ((n1*n2)==r){
             System.out.println("*");
-        }else if ((n1/n2)==r){
-            System.out.println("/");
-        }else if ((n1%n2)==r) {
+        }else if (n2 != 0) {
+            if ((n1 / n2) == r) {
+                System.out.println("/");
+            }
+        }else if (n2 != 0) {
+            if ((n1%n2)==r) {
             System.out.println("%");
+            }
         }else System.out.println("Imposible");
     }
 }
